@@ -28,7 +28,7 @@ def curr_day_schedule():
     sp.Speak("today is {}".format(today))
     periods=df.columns[1:]
     #df.loc[df["Day\Period"]==today,periods]
-    for i in range(0,6):
+    for i in range(0,len(periods)):
         sp.Speak(periods[i])
         sp.Speak(df.loc[df["Day\Period"]==today,periods[i]].values)
         #print(df.loc[df["Day\Period"]==today,periods[i]].values)
